@@ -1,3 +1,8 @@
 export const environment = {
-  production: true
+  production: true,
+  host: '',
+  clientID: '',
+  clientSecret: '',
+  sourceCode: '',
+  aesKey: ''
 };

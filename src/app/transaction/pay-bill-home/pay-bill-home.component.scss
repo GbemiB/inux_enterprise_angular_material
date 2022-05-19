@@ -1,0 +1,61 @@
+
+.mat-card {
+    margin: 5rem !important;
+
+    .mat-form-field {
+        margin-right: 2rem;
+        margin-top: 1rem;
+        width: 15rem;
+    }
+}
+
+.btn-color {
+    color:#0082bb !important;
+}
+
+.title{
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.headerTitle{
+  font-size: 1.5rem;
+  margin-left: 7rem;
+  margin-bottom: -2rem;
+  margin-top: 3rem;
+}
+
+  .text-warning{
+    color: #b6b110;
+  }
+  
+  .text-success{
+    color: #2d6a12;
+  }
+
+
+.table-container {
+    overflow: auto;
+    width: 100%;
+  }
+
+table {
+    overflow-x: scroll;
+    width: 100%;
+
+    .mat-header-cell {
+        background-color: #DBDBDB;
+    }
+
+    th {
+      padding: 1rem;
+    }
+
+    td {
+      padding: 0.5rem;
+    }
+
+  }
+
+
+
+  

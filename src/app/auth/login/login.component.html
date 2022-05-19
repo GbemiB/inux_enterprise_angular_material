@@ -1,0 +1,63 @@
+<div class="main-div">
+  <mat-card fxFlex="35">
+    <mat-card-content>
+      <mat-card-title fxLayoutAlign="center center">
+        <img src="assets/img/user.png" width="20%" />
+        <br />
+        Login With Credentials
+      </mat-card-title>
+      <form
+        [formGroup]="exForm"
+        fxLayoutAlign="stretch"
+        (ngSubmit)="login()"
+        fxLayout="column"
+        id="login"
+      >
+        <div class="username-input" fxLayoutAlign="stretch" fxLayout="column">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Username</mat-label>
+            <input
+              formControlName="username"
+              matInput
+              id="usercode"
+              type="text"
+              required
+            />
+            <mat-error *ngIf="checkError('username', 'minlength')"
+              >Username is less than 6</mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div class="password-input" fxLayoutAlign="stretch" fxLayout="column">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+              formControlName="password"
+              id="passcode"
+              matInput
+              [type]="hide ? 'password' : 'text'"
+              required
+            />
+
+            <span class="input-group-addon"
+              ><i class="glyphicon glyphicon-lock"></i
+            ></span>
+
+            <mat-error *ngIf="checkError('password', 'minlength')"
+              >Password length is less than 6
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <button
+          mat-raised-button
+          class="full-width"
+          th
+          type="submit"
+          color="primary"
+        >
+          LOG IN
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
