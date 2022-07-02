@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TransactionRoutingModule } from './transaction-routing.module';
 import { RecieptComponent } from './reciept/reciept.component';
-import { MaterialModule } from '../shared/material-module';
 import { payInuxBill } from './inux-bill/inux-bill.component';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../shared/material-module';
 
 @NgModule({
   declarations: [
@@ -11,9 +12,11 @@ import { payInuxBill } from './inux-bill/inux-bill.component';
     RecieptComponent
   ],
   imports: [
-    CommonModule,
     MaterialModule,
+    CommonModule,
     TransactionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class TransactionModule { }

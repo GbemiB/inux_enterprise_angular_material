@@ -10,41 +10,7 @@ import { RecieptComponent } from '../reciept/reciept.component';
   styleUrls: ['./inux-bill.component.scss']
 })
 export class payInuxBill implements OnInit {
-  firstFormGroup: FormGroup = new FormGroup({});;
-  secondFormGroup: FormGroup = new FormGroup({});
-  isEditable = false;
-
-  constructor(
-    private _formBuilder: FormBuilder,
-    public dialog: MatDialog,
-    private notify: NotificationService) { }
-
-  ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      destAffiliate: ['', Validators.required],
-      receiveAccount: ['', Validators.required],
-      senderAccount: ['', Validators.required]
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      product: ['', Validators.required],
-      amount: ['', Validators.required],
-      purpose: ['', Validators.required],
-    });
-  }
-
-  performTransaction(): void {
-    this.printReceipt();
-  }
-
-
-  printReceipt(): void {
-    const dialogRef = this.dialog.open(RecieptComponent, {
-      height: '800px',
-      width: '1500px',
-    });
-
-    dialogRef.afterClosed().subscribe((result) => {
-    });
+  ngOnInit(): void {
   }
 
 }
